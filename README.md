@@ -20,11 +20,10 @@ A aplicação consiste na criação e gerenciamento de listas que podem ser tota
 ![Web 3](https://github.com/Mopi98/buylist/blob/main/assets/3-web.PNG)
 
 # Tecnologias utilizadas
-## Processo interno
--HTML
--CSS
--JAVASCRIPT
--BOOTSTRAP 
+- HTML
+- CSS
+- JAVASCRIPT
+- BOOTSTRAP 
 
 ## Implantação em produção
 - Web front-end: Netlify
