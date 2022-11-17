@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Lista de Compras</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="storage.js" defer></script>
+    <script src="index.js" defer></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="home">
+        <div id="inicio" class="container d-flex flex-column align-items-center justify-content-center">
+            <h1 class="display-2 my-3">Buylist</h1>
+            <i class="fa fa-cart-plus fa-5x my-3" aria-hidden="true"></i>
+            <a href="#listas" class="btn btn-warning my-3">Listas</a>
+            <a href="#cadastrolistas" class="btn btn-primary my-3 ">Nova Lista</a>
+        </div>
+    </section>
+    <section id="listas">
+        <header>
+            <i class="fa fa-arrow-left" aria-hidden="true" onclick="back()"></i>
+            <span>Listas</span>
+        </header>
+        <main>
+
+            <div class="listascompra">
+                <table id="table_lista" style="list-style: none;" class="table  mb-3">
+                    <tbody>
+                        <tr>
+                            <td>Compras Novembro</td>
+                        </tr>
+                        <tr>
+                            <td>Padaria</td>
+                        </tr>
+                        <tr>
+                            <td>Material Escolar</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a name="" id="" class="btn btn-warning" href="#cadastrolistas" role="button">Cadastrar Nova Lista</a>
+            </div>
+        </main>
+    </section>
+
+    <section id="lista_itens">
+        <header>
+            <i class="fa fa-arrow-left" aria-hidden="true" onclick="back()"></i>
+            <span id="titulo_lista">Lista</span>
+        </header>
+        <main>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Quantidade</th>
+                        <th scope="col">Ação</th>
+                    </tr>
+                </thead>
+                <tbody id="table_itens">
+
+                </tbody>
+            </table>
+
+            <a name="" id="" class="btn btn-primary" href="#cadastrolistas" role="button">Cadastrar Nova Lista</a>
+            </div>
+        </main>
+    </section>
+
+
+
+
+
+
+    <section id="cadastrolistas">
+        <header>
+            <i class="fa fa-arrow-left" aria-hidden="true" onclick="back()"></i>
+            <span>Listas</span>
+        </header>
+        <main>
+            <div class="formulario">
+                <div class="form-group">
+                    <label for="">Nome da Lista</label>
+                    <input type="text" class="form-control" name="" id="input_lista" aria-describedby="helpId"
+                        placeholder="">
+                    <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
+                </div>
+                <button type="button" name="" id="btn_cadastro_lista"
+                    class="btn btn-primary btn-lg btn-block">Cadastrar</button>
+            </div>
+            <!-- <div class="itensdalista">
+                <ul>
+                    
+                </ul>
+            </div>
+            <a name="" id="" class="btn btn-primary" href="#cadastroitens" role="button">Adicionar Item</a> -->
+        </main>
+
+    </section>
+
+    <section id="cadastroitens">
+        <header>
+            <i class="fa fa-arrow-left" aria-hidden="true" onclick="back()"></i>
+            <span> Cadastro de Item</span>
+        </header>
+        <main>
+            <form class="formulario mb-5">
+                <div class="form-group">
+                    <label for="">Nome da Lista</label>
+                    <input type="text" class="form-control" name="" id="lista_edit" aria-describedby="helpId"
+                        placeholder="">
+                    <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
+                </div>
+                <button type="button" name="" id="" onclick="edit_lista()"
+                    class="btn btn-primary btn-lg btn-block">Modificar Nome da Lista</button>
+            </form>
+            <div class="form-group mb-5">
+                <label for="" class="mb-3">Item</label>
+                <div class="form-row">
+                    <div class="col-lg-4 col-sm-12 mb-2 ">
+                        <input type="text" class="form-control" name="" id="nome_item" aria-describedby="helpId" pattern="^[a-zA-Z0-9]+$"
+                        placeholder="Nome do Item">
+                    </div>
+                    <div class="col-lg-4 col-sm-12 mb-2 ">
+                        <input type="text" class="form-control" name="" id="quantidade_item" aria-describedby="helpId" pattern="^[a-zA-Z0-9]+$"
+                        placeholder="Quantidade">
+                    </div>
+                    <div class="col-lg-4 col-sm-12 mb-2 ">
+                        <button type="button" name="" id="btn_cadastro_lista" class="btn btn-warning"
+                        onclick="adicionarItem()">Adicionar</button>
+                    </div>
+                </div>
+            </div>    
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Quantidade</th>
+                            <th scope="col">Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cadastroitens__table_item">
+
+                    </tbody>
+                </table>
+
+        </main>
+
+    </section>
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+</body>
+
+</html>
